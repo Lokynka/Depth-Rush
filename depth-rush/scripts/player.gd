@@ -1,25 +1,38 @@
 extends CharacterBody2D
 
+@export var max_speed := 90.0
+@export var acceleration := 250.0   # ako rýchlo sa rozbehne
+@export var friction := 150.0       # ako rýchlo spomalí (zotrvačnosť vo vode)
+@export var surface_y := -60.0      # výška hladiny
 
-const SPEED = 130.0
-const JUMP_VELOCITY = -300.0
-
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
+	var dir := Input.get_vector("move_left", "move_right", "move_up", "move_down")
 
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
+	# plynulé zrýchľovanie a dobiehanie, aby to pôsobilo ako vo vode
+	if dir != Vector2.ZERO:
+		velocity = velocity.move_toward(dir * max_speed, acceleration * delta)
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
 
 	move_and_slide()
+
+	# ponorka nesmie vyletieť nad hladinu
+	if global_position.y < surface_y:
+		global_position.y = surface_y
+		velocity.y = max(velocity.y, 0.0)
+
+	_update_animation(dir, delta)
+
+func _update_animation(dir: Vector2, delta: float) -> void:
+	# otočenie podľa smeru (sprite je nakreslený smerom doprava)
+	if dir.x != 0:
+		sprite.flip_h = dir.x < 0
+	# vrtuľa sa točí rýchlejšie, keď ponorka ide rýchlo
+	sprite.speed_scale = 0.3 + velocity.length() / max_speed
+	# jemné naklonenie pri stúpaní a klesaní
+	var tilt := velocity.y / max_speed * 0.25
+	if sprite.flip_h:
+		tilt = -tilt
+	sprite.rotation = lerp(sprite.rotation, tilt, 8.0 * delta)
