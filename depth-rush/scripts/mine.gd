@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 	time += delta
 	position.x -= speed * delta
 	position.y = start_y + sin(time * 2.0) * wobble
-	if position.x < -200:       # mimo obrazovky -> zmazať
+	if position.x < -20:       # mimo obrazovky -> zmazať
 		queue_free()
 
 func _on_body_entered(body: Node2D) -> void:
