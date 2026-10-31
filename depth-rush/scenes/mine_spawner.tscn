@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://y6rnl6w3dx86"]
+
+[ext_resource type="Script" uid="uid://dt75xraae5ktv" path="res://scripts/mine_spawner.gd" id="1_qodw3"]
+[ext_resource type="PackedScene" uid="uid://c4ofr5e5s5ew6" path="res://scenes/mine.tscn" id="2_vm4ms"]
+
+[node name="MineSpawner" type="Node2D" unique_id=1038386767]
+script = ExtResource("1_qodw3")
+mine_scene = ExtResource("2_vm4ms")
+min_y = 10.0
+
+[node name="Timer" type="Timer" parent="." unique_id=277735676]
+wait_time = 2.0
+autostart = true

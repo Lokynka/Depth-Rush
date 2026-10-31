@@ -1,11 +1,16 @@
 [gd_scene format=3 uid="uid://d4fpftas7h14e"]
 
 [ext_resource type="PackedScene" uid="uid://txbcy3g6oavv" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://y6rnl6w3dx86" path="res://scenes/mine_spawner.tscn" id="1_yqjtg"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dtglo"]
 distance = -12.0
 
 [node name="Game" type="Node2D" unique_id=1017686189]
+
+[node name="MineSpawner" parent="." unique_id=1038386767 instance=ExtResource("1_yqjtg")]
+min_y = -20.0
+max_y = -20.0
 
 [node name="Player" parent="." unique_id=141420738 instance=ExtResource("1_uwrxv")]
 position = Vector2(16, -1)
