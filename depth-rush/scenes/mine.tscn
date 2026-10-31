@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c4ofr5e5s5ew6"]
+
+[ext_resource type="Texture2D" uid="uid://bpwlc4fo4l870" path="res://assets/Miny/Miny.png" id="1_kqr42"]
+[ext_resource type="Script" uid="uid://djivn5dplcwlj" path="res://scripts/mine.gd" id="1_yym1a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ovi2x"]
+radius = 5.0
+
+[node name="Mine" type="Area2D" unique_id=697527543]
+script = ExtResource("1_yym1a")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=137810566]
+texture = ExtResource("1_kqr42")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2147422454]
+position = Vector2(1, 2)
+shape = SubResource("CircleShape2D_ovi2x")
