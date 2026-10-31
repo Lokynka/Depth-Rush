@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgji01j0jk47p"
-path="res://.godot/imported/Aquaman_Walk.png-ba2ade6b643e03303f1c55656f633604.ctex"
+uid="uid://2o0y42w352kc"
+path="res://.godot/imported/Miny3.png-d8c3fb30a519764d0b041966126203e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Aqualand/Aquaman_Walk.png"
-dest_files=["res://.godot/imported/Aquaman_Walk.png-ba2ade6b643e03303f1c55656f633604.ctex"]
+source_file="res://assets/Miny/Miny3.png"
+dest_files=["res://.godot/imported/Miny3.png-d8c3fb30a519764d0b041966126203e1.ctex"]
 
 [params]
 

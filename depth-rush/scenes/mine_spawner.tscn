@@ -6,7 +6,6 @@
 [node name="MineSpawner" type="Node2D" unique_id=1038386767]
 script = ExtResource("1_qodw3")
 mine_scene = ExtResource("2_vm4ms")
-min_y = 10.0
 
 [node name="Timer" type="Timer" parent="." unique_id=277735676]
 wait_time = 2.0

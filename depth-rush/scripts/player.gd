@@ -1,9 +1,11 @@
 extends CharacterBody2D
 
+@export var min_x := 16.0
+@export var max_x := 304.0
 @export var max_speed := 90.0
 @export var acceleration := 250.0   # ako rýchlo sa rozbehne
 @export var friction := 150.0       # ako rýchlo spomalí (zotrvačnosť vo vode)
-@export var surface_y := -60.0      # výška hladiny
+@export var surface_y := 60.0      # výška hladiny
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -17,7 +19,9 @@ func _physics_process(delta: float) -> void:
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
 
 	move_and_slide()
-
+	
+	global_position.x = clamp(global_position.x, min_x, max_x)
+	
 	# ponorka nesmie vyletieť nad hladinu
 	if global_position.y < surface_y:
 		global_position.y = surface_y
