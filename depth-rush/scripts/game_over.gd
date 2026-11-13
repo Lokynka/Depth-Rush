@@ -1,9 +1,9 @@
 extends CanvasLayer
 
-@onready var score_label: Label = %SkoreLabel
-@onready var best_label: Label = %NajlepsieLabel
-@onready var retry_button: Button = %ZnovaButton
-@onready var menu_button: Button = %MenuButton
+@onready var score_label: Label = %Skore
+@onready var best_label: Label = %Najlepsie
+@onready var retry_button: Button = %Znova
+@onready var menu_button: Button = %Menu
 
 func _ready() -> void:
 	visible = false
