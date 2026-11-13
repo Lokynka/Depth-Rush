@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://txbcy3g6oavv" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://y6rnl6w3dx86" path="res://scenes/mine_spawner.tscn" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://cyrfnt35uho3j" path="res://scenes/hud.tscn" id="3_lnu2h"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dtglo"]
 
@@ -23,3 +24,5 @@ position = Vector2(160, 170)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=48755851]
 shape = SubResource("WorldBoundaryShape2D_dtglo")
+
+[node name="HUD" parent="." unique_id=108597712 instance=ExtResource("3_lnu2h")]
