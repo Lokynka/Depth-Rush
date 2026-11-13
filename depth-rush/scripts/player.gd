@@ -43,6 +43,8 @@ func _physics_process(delta: float) -> void:
 	_update_animation(dir, delta)
 
 func _update_animation(dir: Vector2, delta: float) -> void:
+	if dead:
+		return
 	if velocity.length() > 5.0:
 		sprite.play("move")
 	else:
