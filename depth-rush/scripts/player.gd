@@ -16,6 +16,7 @@ signal kyslik_zmeneny(value: float, max_value: float)
 @export var kyslik_doplenie := 40.0
 
 var kyslik := 0.0
+var dead := false
 
 func _ready() -> void:
 	kyslik = max_kyslik
@@ -74,7 +75,17 @@ func _update_kyslik(delta: float) -> void:
 		_out_of_kyslik()
 		
 func _out_of_kyslik() -> void:
-	set_physics_process(false)
+	die()
+	
+func die() -> void:
+	if dead:
+		return
+	dead = true
+	set_physics_process(false)                              # ponorka sa prestane hýbať
+	$CollisionShape2D.set_deferred("disabled", true)        # už do ničoho nenarazí
+	sprite.modulate = Color.WHITE
+	sprite.rotation = 0.0
 	sprite.play("explode")
 	await sprite.animation_finished
-	get_tree().reload_current_scene()
+	sprite.visible = false
+	GameManager.game_over()
