@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://bqk7yqxd6ktwr"]
+
+[ext_resource type="Script" uid="uid://dp6yuasi2nxjp" path="res://scripts/game_over.gd" id="1_xeevv"]
+
+[node name="GameOver" type="CanvasLayer" unique_id=1666996680]
+process_mode = 3
+layer = 10
+script = ExtResource("1_xeevv")
+
+[node name="Pozadie" type="ColorRect" parent="." unique_id=565674622]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1772635218]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=665014032]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Titulok" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1421774192]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "KONIEC HRY"
+horizontal_alignment = 1
+
+[node name="Skore" type="Label" parent="CenterContainer/VBoxContainer" unique_id=985802412]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Skóre: 0"
+horizontal_alignment = 1
+
+[node name="Najlepsie" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1340141689]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Najlepšie: 0"
+horizontal_alignment = 1
+
+[node name="Znova" type="Button" parent="CenterContainer/VBoxContainer" unique_id=786883047]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Hrať znova"
+
+[node name="Menu" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1390919312]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Hlavné menu"
