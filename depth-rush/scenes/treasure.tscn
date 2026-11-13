@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://boifqgebwj5da"]
+
+[ext_resource type="SpriteFrames" uid="uid://3jk4yfibdp5t" path="res://assets/Poklady/poklad_frames.tres" id="1_86quu"]
+[ext_resource type="Script" uid="uid://b5dkqcwjd0r1e" path="res://scripts/treasure.gd" id="1_it12x"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ovi2x"]
+radius = 7.0
+
+[node name="Treasure" type="Area2D" unique_id=2032827944]
+script = ExtResource("1_it12x")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1786753027]
+sprite_frames = ExtResource("1_86quu")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1381601508]
+shape = SubResource("CircleShape2D_ovi2x")

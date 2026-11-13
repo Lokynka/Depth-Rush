@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://c2s03jy50gese"]
+
+[ext_resource type="Script" uid="uid://cat1l0waft4l7" path="res://scripts/treasure_spawner.gd" id="1_upeat"]
+[ext_resource type="PackedScene" uid="uid://boifqgebwj5da" path="res://scenes/treasure.tscn" id="2_sj0ol"]
+
+[node name="TreasureSpawner" type="Node2D" unique_id=1994625459]
+script = ExtResource("1_upeat")
+treasure_scene = ExtResource("2_sj0ol")
+
+[node name="Timer" type="Timer" parent="." unique_id=1500947613]
+wait_time = 3.0
+autostart = true

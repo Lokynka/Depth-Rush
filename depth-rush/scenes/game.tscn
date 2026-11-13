@@ -1,12 +1,17 @@
 [gd_scene format=3 uid="uid://d4fpftas7h14e"]
 
+[ext_resource type="Script" uid="uid://b0t2ofi5pjk1w" path="res://scripts/game.gd" id="1_iywne"]
 [ext_resource type="PackedScene" uid="uid://txbcy3g6oavv" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://y6rnl6w3dx86" path="res://scenes/mine_spawner.tscn" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://c2s03jy50gese" path="res://scenes/treasure_spawner.tscn" id="2_p57ef"]
 [ext_resource type="PackedScene" uid="uid://cyrfnt35uho3j" path="res://scenes/hud.tscn" id="3_lnu2h"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dtglo"]
 
 [node name="Game" type="Node2D" unique_id=1017686189]
+script = ExtResource("1_iywne")
+
+[node name="TreasureSpawner" parent="." unique_id=1994625459 instance=ExtResource("2_p57ef")]
 
 [node name="MineSpawner" parent="." unique_id=1038386767 instance=ExtResource("1_yqjtg")]
 spawn_x = 340.0
