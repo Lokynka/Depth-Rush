@@ -6,6 +6,7 @@ signal treasures_changed(collected: int, needed: int)
 var score := 0
 var treasures := 0
 var treasures_needed := 5
+var scroll_speed := 30.0
 
 func add_treasure(points: int) -> void:
 	score += points

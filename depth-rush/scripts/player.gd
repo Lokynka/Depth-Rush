@@ -65,7 +65,7 @@ func _update_kyslik(delta: float) -> void:
 	kyslik_zmeneny.emit(kyslik, max_kyslik)
 	
 	if kyslik > 0.0 and kyslik < max_kyslik * 0.25:
-		var blink := int(Time.get_ticks_msec() / 200) % 2 == 0
+		var blink := int(Time.get_ticks_msec() / 200.0) % 2 == 0
 		sprite.modulate = Color(1, 0.5, 0.5) if blink else Color.WHITE
 	else:
 		sprite.modulate = Color.WHITE

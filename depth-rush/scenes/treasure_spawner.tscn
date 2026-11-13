@@ -9,4 +9,3 @@ treasure_scene = ExtResource("2_sj0ol")
 
 [node name="Timer" type="Timer" parent="." unique_id=1500947613]
 wait_time = 3.0
-autostart = true
