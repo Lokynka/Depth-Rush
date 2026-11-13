@@ -26,6 +26,7 @@ position = Vector2(60, 100)
 position = Vector2(160, 90)
 
 [node name="GameOver" parent="." unique_id=1666996680 instance=ExtResource("2_u5sy4")]
+visible = false
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1677120598]
 position = Vector2(160, 170)
