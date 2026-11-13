@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://txbcy3g6oavv" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://y6rnl6w3dx86" path="res://scenes/mine_spawner.tscn" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://c2s03jy50gese" path="res://scenes/treasure_spawner.tscn" id="2_p57ef"]
-[ext_resource type="PackedScene" uid="uid://bqk7yqxd6ktwr" path="res://scenes/game_over.tscn" id="2_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://bmsuef07hafhk" path="res://scenes/game_over.tscn" id="2_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://cyrfnt35uho3j" path="res://scenes/hud.tscn" id="3_lnu2h"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dtglo"]
