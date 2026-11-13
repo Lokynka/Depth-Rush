@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://txbcy3g6oavv"]
 
 [ext_resource type="Script" uid="uid://bma5vdo6c6n4b" path="res://scripts/player.gd" id="1_g2els"]
-[ext_resource type="SpriteFrames" path="res://assets/ponorka/ponorka_frames.tres" id="2_g2els"]
+[ext_resource type="SpriteFrames" uid="uid://cdx6yisojlqj7" path="res://assets/ponorka/ponorka_frames.tres" id="2_g2els"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hb2j5"]
 size = Vector2(24, 11)

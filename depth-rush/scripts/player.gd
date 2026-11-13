@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var min_x := 16.0
-@export var max_x := 304.0
+@export var max_x := 120.0
 @export var max_speed := 90.0
 @export var acceleration := 250.0
 @export var friction := 150.0       # zotrvačnosť
