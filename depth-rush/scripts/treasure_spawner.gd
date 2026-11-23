@@ -23,7 +23,7 @@ func _spawn_treasure() -> void:
 	treasure.points = 5 if y < 100 else (10 if y < 135 else 25)
 	add_child(treasure)
 
-	# nájde výšku, kde pri pravom okraji nič nie je; ak nenájde, vráti NAN
+#nájde výšku, kde pri pravom okraji nič nie je; ak nenájde, vráti NAN
 func _find_free_y(at_x: float, from_y: float, to_y: float, gap: float) -> float:
 	for attempt in 10:
 		var y := randf_range(from_y, to_y)

@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var wobble := 4.0      # ako veľmi sa hojdá hore-dole
+@export var wobble := 8.0	#ako veľmi sa hojdá hore-dole
 
 @onready var sprite: AnimatedSprite2D = $Sprite2D
 
@@ -24,7 +24,7 @@ func _process(delta: float) -> void:
 		queue_free()
 
 func _on_body_entered(body: Node2D) -> void:
-	if exploded or not body.has_method("die"):
+	if exploded or not body.has_method("hit"):
 		return
 	exploded = true
 	body.die()

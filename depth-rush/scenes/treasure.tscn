@@ -13,6 +13,7 @@ script = ExtResource("1_it12x")
 sprite_frames = ExtResource("1_86quu")
 animation = &"idle"
 autoplay = "idle"
+frame_progress = 0.42919034
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1381601508]
 shape = SubResource("CircleShape2D_ovi2x")
